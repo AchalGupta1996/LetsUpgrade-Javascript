@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Assignment2</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            
+        }
+        
+
+        .form{
+            width:80%;
+            height:200px;
+            margin-left: 10%;
+            margin-top: 70px;
+        } 
+
+        input{
+            width:300px;
+            height:40px;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-top: 10px;
+            text-align: center;
+        } 
+
+        .table{
+            width:80%;
+            margin-left: 10%;
+            text-align:center;
+        } 
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            text-decoration: underline;
+        }
+
+        th,td{
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            font-size: 1.5em;
+            background-color:darkgrey;
+            
+        }
+
+        td{
+            font-size: 1.1em;
+            font-weight:500;
+            background-color:lightgray;
+
+        }
+
+        .search{
+            margin-left:20%;
+            margin-bottom: 20px;
+
+        }
+        .btn{
+            margin-left: 10px;
+        }
+
+        .background{
+            background-color:rgb(190, 150, 202);
+            /* width: 90%; */
+            height:100vh;
+            /* margin-left: %; */
+            display:inline-block
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="background">
+
+    <h1>BUS SERVICE</h1>
+    <div class="form">
+<form onsubmit="addbus(event)" class="form">
+    <input type="text" placeholder="name" required id="name">
+    <input type="text" placeholder="source" required id="source">
+    <input type="text" placeholder="destination" required id="dest">
+    <input type="text" placeholder="number" required id="num">
+    <input type="text" placeholder="capacity" required id="cap">
+    <button id="button" class="btn btn-danger">Add Bus</button>
+
+    <br><br>
+
+</form>
+
+</div>
+
+<input type="text" placeholder="search by source" id="searchsource" class="search" onkeyup="searchbysource()">
+    <input type="text" placeholder="search by destination" id="searchbydest" class="search" onkeyup="searchbydestination()">
+<br><br>
+    <table  class="table table-bordered table-responsive table-hover">
+        <thead class="thead">
+            <tr>
+                
+                <th>Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>number</th>
+                <th>capacity</th>
+
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+</div>
+
+
+    <script src="question_2.js"></script>
+</body>
+</html>

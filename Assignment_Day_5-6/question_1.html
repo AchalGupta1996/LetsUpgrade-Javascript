@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Assignment1</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .background{
+            background-color:rgb(190, 150, 202);
+            width: 90%;
+            height:80vh;
+            margin-left: 5%;
+        }
+
+        .text{
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 40px;
+        }
+        .table{
+            width:80%;
+            margin-left: 10%;
+            /* padding-top: 70px; */
+            text-align: center;
+        }
+
+        th,td{
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            font-size: 1.5em;
+            background-color: darkgray;
+        }
+
+        td{
+            font-size: 1.1em;
+            font-weight:500;
+            background-color: lightgray;
+        }
+
+        .search{
+            text-align: center;
+            margin-top:30px;
+            width:50%;
+            margin-left:25%;
+            height: 40px;
+            border-radius:10px;
+            
+            
+            
+        }
+
+        #city{
+            margin-bottom: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="background">
+
+<h1 class="text">Employees Records</h1>
+
+
+
+    <input type="text" placeholder="search by name" id="name" class="search" 
+    onkeyup="searchbyname()" ><i class="fa fa-search"></i>
+    <input type="text" placeholder="search by city" id="city" class="search" 
+    onkeyup="searchbycity()"><i class="fa fa-search"></i>
+
+
+    <table  class="table table-bordered table-responsive table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Salary</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    
+</div>
+    <script src="./question_1.js"></script>
+</body>
+</html>
